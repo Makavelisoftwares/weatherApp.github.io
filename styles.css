@@ -1,0 +1,132 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    background: #222;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+body::before{
+    content: '';
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background-image: url('./images/nairobi.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: .255;
+    height: 100vh;
+
+}
+
+main{
+    position: relative;
+    max-width: 80%;
+    margin: auto;  
+    /* padding: 50px; */
+}
+.header{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    flex: 5;
+    color: rgb(255, 160, 52);
+    font-size: 1.3em;
+}
+.search{
+    margin-top: 20px;
+    flex: 7;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search input{
+    margin-top: 20px;
+
+    width: 100%;
+    padding: 12px ;
+    outline: none;
+    border: 1px solid rgb(255, 160, 52);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+.search button{
+    margin-top: 20px;
+    position: absolute;
+    right: 0px;
+    top: 0%;
+    padding: 12px;
+    color: #fff;
+    background-color: rgb(255, 160, 52);
+    border: 1px solid #fff;
+    cursor: pointer;
+    width: 70px;
+    border-radius: 5px;
+
+
+
+}
+.search input:focus{
+    background-color: #fff;
+}
+.card{
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+ }
+ .weather span{
+     color: rgb(255, 160, 52);
+ }
+ .weather{
+     margin-top: 20px;
+     line-height: 40px;
+     font-weight: 500;
+ }
+
+.weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather.loading::after{
+    margin-top: 90px;
+    font-size: 1.5em;
+    visibility: visible;
+    content: 'Loading Weather...';
+    font-weight: 100;
+    position: absolute;
+    top: 0;
+} 
+.img-desc{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+}
+@media (max-width:600) {
+    .header{
+        display: grid;
+    }
+    .weather.loading::after{
+        font-size: 1em;
+    }
+    
+}
+
